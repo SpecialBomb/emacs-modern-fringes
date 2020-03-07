@@ -23,6 +23,8 @@
 ;;   (modern-fringes-default-theme)
 ;; 
 ;; ... in your init as well, before the modern-fringes-init function.
+;; Depending on your theme, it may not work properly. In that case,
+;; you can edit the face manually with M-x customize.
 ;;
 ;; modern-fringes was designed assuming the fringe width is 8 pixels
 ;; wide.  It will likely look strange if the width is any less or more.
