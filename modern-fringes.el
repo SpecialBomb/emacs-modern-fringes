@@ -5,7 +5,7 @@
 ;; Author: Quen Jankosky <quen.jankosky@gmail.com>
 ;; Keywords: themes, fringes
 ;; URL: http://github.com/specialbomb/emacs-modern-fringes
-;; Version: 1
+;; Version: 2
 
 ;;; Commentary:
 
@@ -144,6 +144,8 @@
 	(set-fringe-bitmap-face 'right-arrow 'modern-fringes-arrows)
 	(set-fringe-bitmap-face 'left-arrow 'modern-fringes-arrows))
   (message "Applied modern-fringes."))
+
+;;;###autoload
 
 (defun modern-fringes-invert-arrows ()
   "Apply ideal colors for the fringe truncation arrows in a flexible manner.  Should be used before (modern-fringes-init) is called in the user's init file."
