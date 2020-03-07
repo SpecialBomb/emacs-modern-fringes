@@ -20,7 +20,7 @@
 ;; color of the default face, making a "transparent" effect (see
 ;; screen-shots on the github). To apply this, put:
 ;;
-;;   (modern-fringes-default-theme)
+;;   (modern-fringes-invert-arrows)
 ;; 
 ;; ... in your init as well, before the modern-fringes-init function.
 ;; Depending on your theme, it may not work properly. In that case,
@@ -119,7 +119,7 @@
   "Group for faces associated with modern-fringes."
   :group 'faces)
 
-(defface modern-fringes-normal
+(defface modern-fringes-arrows
   `((default))
 	"\"Transparent\" style face theme for modern-fringes left and right arrows."
 	:group 'modern-fringes-faces)
@@ -141,14 +141,14 @@
 	(define-fringe-bitmap 'left-curly-arrow mf-left-curly-arrow nil nil 'center)
 	(define-fringe-bitmap 'right-triangle mf-right-debug-arrow nil nil 'center)
 	(define-fringe-bitmap 'left-triange mf-left-debug-arrow nil nil 'center)
-	(set-fringe-bitmap-face 'right-arrow 'modern-fringes-normal)
-	(set-fringe-bitmap-face 'left-arrow 'modern-fringes-normal))
+	(set-fringe-bitmap-face 'right-arrow 'modern-fringes-arrows)
+	(set-fringe-bitmap-face 'left-arrow 'modern-fringes-arrows))
   (message "Applied modern-fringes."))
 
-(defun modern-fringes-flexible-invert ()
-  "Apply ideal fringe bitmap colors intended for use with minimal-fringes in a flexible manner.  Should be used before (minimal-fringes-init) is called."
+(defun modern-fringes-invert-arrows ()
+  "Apply ideal colors for the fringe truncation arrows in a flexible manner.  Should be used before (modern-fringes-init) is called in the user's init file."
   (interactive)
-  (set-face-attribute 'modern-fringes-normal nil
+  (set-face-attribute 'modern-fringes-arrows nil
 					  :foreground (face-attribute 'default :background)
 					  :background (face-attribute 'fringe :background))
   (message "Applied modern-fringes default theme."))
