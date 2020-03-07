@@ -16,6 +16,8 @@ modern-fringes was designed assuming the fringe width is 8 pixels wide. It will 
 
 Truncation:
 
+This uses `(modern-fringes-invert-arrows)` for the transparent effect.
+
 ![alt text](https://github.com/SpecialBomb/emacs-modern-fringes/raw/master/screenshots/truncation.png "truncation")
 
 Wrapping:
