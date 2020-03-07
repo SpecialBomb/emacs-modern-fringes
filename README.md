@@ -6,7 +6,7 @@ modern-fringes is meant to replace the arguably ugly default fringe bitmaps with
 
 ... in your emacs init. To use this as designed, an optional function can be applied that sets the truncation arrows to the background color of the default face, making a "transparent" effect (seescreen-shots). To apply this, put:
 
-```(modern-fringes-flexible-invert)```
+```(modern-fringes-invert-arrows)```
 
 ... in your init as well, before the modern-fringes-init function. Depending on your theme, it may not look right.
 
