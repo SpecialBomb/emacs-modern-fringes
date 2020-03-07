@@ -10,12 +10,12 @@
 ;;; Commentary:
 
 ;; modern-fringes is meant to replace the arguably ugly default fringe bitmaps
-;; with more modern, easier on the eyes ones. They are very simple to use,
+;; with more modern, easier on the eyes ones.  They are very simple to use,
 ;; simply put:
 ;;
 ;;   (modern-fringes-init)
 ;;
-;; ... in your emacs init. To use this as designed, an optional function
+;; ... in your Emacs init.  To use this as designed, an optional function
 ;; can be applied that sets the truncation arrows to the background
 ;; color of the default face, making a "transparent" effect (see
 ;; screen-shots on the github). To apply this, put:
@@ -25,7 +25,7 @@
 ;; ... in your init as well, before the modern-fringes-init function.
 ;;
 ;; modern-fringes was designed assuming the fringe width is 8 pixels
-;; wide. It will likely look strange if the width is any less or more.
+;; wide.  It will likely look strange if the width is any less or more.
 
 ;; bitmap references
 
@@ -111,34 +111,44 @@
 ;;0000010
 ;;0000001
 
-(defface modern-fringes
-  `((t :foreground ,(face-attribute 'default :background) :background ,(face-attribute 'fringe :background)))
-  "\"Transparent\" style face theme for modern-fringes left and right arrows.")
+;;; Code:
+
+(defgroup modern-fringes-faces nil
+  "Group for faces associated with modern-fringes."
+  :group 'faces)
+
+(defface modern-fringes-normal
+  `((default))
+	"\"Transparent\" style face theme for modern-fringes left and right arrows."
+	:group 'modern-fringes-faces)
 
 ;;;###autoload
 
 (defun modern-fringes-init ()
-  "This applies all of the modern fringe bitmaps. Makes your fringes look cool!"
+  "Apply all of the modern fringe bitmaps.  Makes your fringes look cool!"
   (interactive)
-  (let* ((mf-right-arrow [128 192 224 240 248 252 254 252 248 240 224 192 128])
-		 (mf-left-arrow [1 3 7 15 31 63 127 63 31 15 7 3 1])
-		 (mf-right-curly-arrow [64 32 16 8 68 72 80 96 124])
-		 (mf-left-curly-arrow [2 4 8 16 34 18 10 6 62])
-		 (mf-right-debug-arrow [128 64 224 16 248 4 254 4 248 16 224 64 128])
-		 (mf-left-debug-arrow [1 2 7 8 31 32 127 32 31 8 7 2 1]))
+  (let ((mf-right-arrow [128 192 224 240 248 252 254 252 248 240 224 192 128])
+		(mf-left-arrow [1 3 7 15 31 63 127 63 31 15 7 3 1])
+		(mf-right-curly-arrow [64 32 16 8 68 72 80 96 124])
+		(mf-left-curly-arrow [2 4 8 16 34 18 10 6 62])
+		(mf-right-debug-arrow [128 64 224 16 248 4 254 4 248 16 224 64 128])
+		(mf-left-debug-arrow [1 2 7 8 31 32 127 32 31 8 7 2 1]))
 	(define-fringe-bitmap 'right-arrow mf-right-arrow nil nil 'center)
 	(define-fringe-bitmap 'left-arrow mf-left-arrow nil nil 'center)
 	(define-fringe-bitmap 'right-curly-arrow mf-right-curly-arrow nil nil 'center)
 	(define-fringe-bitmap 'left-curly-arrow mf-left-curly-arrow nil nil 'center)
 	(define-fringe-bitmap 'right-triangle mf-right-debug-arrow nil nil 'center)
-	(define-fringe-bitmap 'left-triange mf-left-debug-arrow nil nil 'center))
+	(define-fringe-bitmap 'left-triange mf-left-debug-arrow nil nil 'center)
+	(set-fringe-bitmap-face 'right-arrow 'modern-fringes-normal)
+	(set-fringe-bitmap-face 'left-arrow 'modern-fringes-normal))
   (message "Applied modern-fringes."))
 
-(defun modern-fringes-default-theme ()
-  "Applies ideal fringe bitmap colors intended for use with minimal-fringes. Should be used before (minimal-fringes-init) is called."
+(defun modern-fringes-flexible-invert ()
+  "Apply ideal fringe bitmap colors intended for use with minimal-fringes in a flexible manner.  Should be used before (minimal-fringes-init) is called."
   (interactive)
-  (set-fringe-bitmap-face 'right-arrow 'modern-fringes)
-  (set-fringe-bitmap-face 'left-arrow 'modern-fringes)
-  (message "Applied modern-fringes default theme.")
+  (set-face-attribute 'modern-fringes-normal nil
+					  :foreground (face-attribute 'default :background)
+					  :background (face-attribute 'fringe :background))
+  (message "Applied modern-fringes default theme."))
 
 ;;; modern-fringes.el ends here
