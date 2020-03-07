@@ -11,3 +11,17 @@ modern-fringes is meant to replace the arguably ugly default fringe bitmaps with
 ... in your init as well, before the modern-fringes-init function.
 
 modern-fringes was designed assuming the fringe width is 8 pixels wide. It will likely look strange if the width is any less or more.
+
+# Screenshots
+
+Truncation:
+
+![alt text](https://github.com/SpecialBomb/emacs-modern-fringes/raw/master/screenshots/truncation.png "truncation")
+
+Wrapping:
+
+![alt text](https://github.com/SpecialBomb/emacs-modern-fringes/raw/master/screenshots/wrap.png "wrapping")
+
+Debug Arrows:
+
+![alt text](https://github.com/SpecialBomb/emacs-modern-fringes/raw/master/screenshots/debug.png "debug")
