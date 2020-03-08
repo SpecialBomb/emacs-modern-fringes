@@ -154,7 +154,7 @@
 					  :background (face-attribute 'fringe :background))
   (set-fringe-bitmap-face 'right-arrow 'modern-fringes-arrows)
   (set-fringe-bitmap-face 'left-arrow 'modern-fringes-arrows)
-  (message "Applied modern-fringes default theme."))
+  (message "Applied modern-fringes invert arrow colors."))
 
 ;;;###autoload
 
