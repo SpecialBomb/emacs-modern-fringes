@@ -23,7 +23,7 @@
 ;;   (modern-fringes-invert-arrows)
 ;; 
 ;; ... in your init as well, before the modern-fringes-init function.
-;; Depending on your theme, it may not work properly. In that case,
+;; Depending on your theme, it may not work properly.  In that case,
 ;; you can edit the face manually with M-x customize.
 ;;
 ;; modern-fringes was designed assuming the fringe width is 8 pixels
@@ -127,7 +127,7 @@
 ;;;###autoload
 
 (defun modern-fringes-init ()
-  "Apply all of the modern fringe bitmaps.  Makes your fringes look cool!"
+  "Apply all of the modern fringe bitmaps.  Make your fringes look cool!"
   (interactive)
   (let ((mf-right-arrow [128 192 224 240 248 252 254 252 248 240 224 192 128])
 		(mf-left-arrow [1 3 7 15 31 63 127 63 31 15 7 3 1])
