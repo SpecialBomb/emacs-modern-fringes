@@ -167,6 +167,7 @@
   (destroy-fringe-bitmap 'left-curly-arrow)
   (destroy-fringe-bitmap 'right-triangle)
   (destroy-fringe-bitmap 'left-triangle)
+  (redraw-display)
   (message "Reverted fringe bitmaps to default."))
 
 ;;; modern-fringes.el ends here
