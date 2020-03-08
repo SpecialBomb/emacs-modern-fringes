@@ -140,9 +140,7 @@
 	(define-fringe-bitmap 'right-curly-arrow mf-right-curly-arrow nil nil 'center)
 	(define-fringe-bitmap 'left-curly-arrow mf-left-curly-arrow nil nil 'center)
 	(define-fringe-bitmap 'right-triangle mf-right-debug-arrow nil nil 'center)
-	(define-fringe-bitmap 'left-triange mf-left-debug-arrow nil nil 'center)
-	(set-fringe-bitmap-face 'right-arrow 'modern-fringes-arrows)
-	(set-fringe-bitmap-face 'left-arrow 'modern-fringes-arrows))
+	(define-fringe-bitmap 'left-triange mf-left-debug-arrow nil nil 'center))
   (message "Applied modern-fringes."))
 
 ;;;###autoload
@@ -153,6 +151,8 @@
   (set-face-attribute 'modern-fringes-arrows nil
 					  :foreground (face-attribute 'default :background)
 					  :background (face-attribute 'fringe :background))
+  (set-fringe-bitmap-face 'right-arrow 'modern-fringes-arrows)
+  (set-fringe-bitmap-face 'left-arrow 'modern-fringes-arrows)
   (message "Applied modern-fringes default theme."))
 
 ;;; modern-fringes.el ends here
