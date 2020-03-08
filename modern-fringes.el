@@ -141,6 +141,7 @@
 	(define-fringe-bitmap 'left-curly-arrow mf-left-curly-arrow nil nil 'center)
 	(define-fringe-bitmap 'right-triangle mf-right-debug-arrow nil nil 'center)
 	(define-fringe-bitmap 'left-triange mf-left-debug-arrow nil nil 'center))
+  (redraw-display)
   (message "Applied modern-fringes."))
 
 ;;;###autoload
