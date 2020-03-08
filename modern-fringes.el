@@ -156,4 +156,17 @@
   (set-fringe-bitmap-face 'left-arrow 'modern-fringes-arrows)
   (message "Applied modern-fringes default theme."))
 
+;;;###autoload
+
+(defun modern-fringes-revert ()
+  "Revert fringe bitmaps to Emacs' default."
+  (interactive)
+  (destroy-fringe-bitmap 'right-arrow)
+  (destroy-fringe-bitmap 'left-arrow)
+  (destroy-fringe-bitmap 'right-curly-arrow)
+  (destroy-fringe-bitmap 'left-curly-arrow)
+  (destroy-fringe-bitmap 'right-triangle)
+  (destroy-fringe-bitmap 'left-triangle)
+  (message "Reverted fringe bitmaps to default."))
+
 ;;; modern-fringes.el ends here
