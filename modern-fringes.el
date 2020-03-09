@@ -123,7 +123,7 @@
   "Group for modern-fringes")
 
 (defface modern-fringes-arrows
-  `((default))
+  '((default))
 	"\"Transparent\" style face theme for modern-fringes left and right arrows."
 	:group 'modern-fringes-faces)
 
