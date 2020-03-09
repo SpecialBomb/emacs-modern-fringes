@@ -179,6 +179,7 @@
 (define-minor-mode modern-fringes-mode nil nil nil
   :global t
   :group 'modern-fringes
+  :require 'modern-fringes
   (if modern-fringes-mode
 	  (modern-fringes-init)
 	(modern-fringes-revert)))
