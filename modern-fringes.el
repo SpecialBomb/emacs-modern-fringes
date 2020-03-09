@@ -5,7 +5,7 @@
 ;; Author: Quen Jankosky <quen.jankosky@gmail.com>
 ;; Keywords: themes, fringes
 ;; URL: http://github.com/specialbomb/emacs-modern-fringes
-;; Version: 2
+;; Version: 4
 
 ;;; Commentary:
 
@@ -117,10 +117,11 @@
 
 (defgroup modern-fringes-faces nil
   "Group for faces associated with modern-fringes."
-  :group 'faces)
+  :group 'faces :group 'modern-fringes)
 
 (defgroup modern-fringes nil
-  "Group for modern-fringes")
+  "Group for modern-fringes"
+  :group 'convenience)
 
 (defface modern-fringes-arrows
   '((default))
