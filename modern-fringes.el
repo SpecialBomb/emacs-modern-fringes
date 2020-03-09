@@ -115,8 +115,6 @@
 
 ;;; Code:
 
-(provide 'modern-fringes)
-
 (defgroup modern-fringes-faces nil
   "Group for faces associated with modern-fringes."
   :group 'faces :group 'modern-fringes)
@@ -184,5 +182,8 @@
   (if modern-fringes-mode
 	  (modern-fringes-init)
 	(modern-fringes-revert)))
+
+
+(provide 'modern-fringes)
 
 ;;; modern-fringes.el ends here
