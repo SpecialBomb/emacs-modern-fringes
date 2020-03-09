@@ -3,7 +3,7 @@
 ;; Copyright (C) 2020 Quen Jankosky
 
 ;; Author: Quen Jankosky <quen.jankosky@gmail.com>
-;; Keywords: themes, fringes
+;; Keywords: themes, fringes, convenience
 ;; URL: http://github.com/specialbomb/emacs-modern-fringes
 ;; Version: 4.1
 
@@ -11,20 +11,18 @@
 
 ;; modern-fringes is meant to replace the arguably ugly default fringe bitmaps
 ;; with more modern, easier on the eyes ones.  They are very simple to use,
-;; simply put:
+;; simply use the modern-fringes-mode.  As one knows, you may use customize
+;; to make the mode permanent.  It is a global minor mode, so it will affect
+;; all buffers.
 ;;
-;;   (modern-fringes-init)
-;;
-;; ... in your Emacs init.  To use this as designed, an optional function
-;; can be applied that sets the truncation arrows to the background
-;; color of the default face, making a "transparent" effect (see
-;; screen-shots on the github). To apply this, put:
+;; It is suggested to use the following function in your init file to
+;; use modern-fringes at intended.  It makes the truncation arrows appear
+;; transparent, making a very easy on the eyes zipper-effect.
 ;;
 ;;   (modern-fringes-invert-arrows)
 ;; 
-;; ... in your init as well, before the modern-fringes-init function.
 ;; Depending on your theme, it may not work properly.  In that case,
-;; you can edit the face manually with M-x customize.
+;; you can edit the bitmap faces as you wish in your config.
 ;;
 ;; modern-fringes was designed assuming the fringe width is 8 pixels
 ;; wide.  It will likely look strange if the width is any less or more.
