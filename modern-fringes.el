@@ -119,6 +119,9 @@
   "Group for faces associated with modern-fringes."
   :group 'faces)
 
+(defgroup modern-fringes nil
+  "Group for modern-fringes")
+
 (defface modern-fringes-arrows
   `((default))
 	"\"Transparent\" style face theme for modern-fringes left and right arrows."
@@ -146,6 +149,20 @@
 
 ;;;###autoload
 
+(defun modern-fringes-revert ()
+  "Revert fringe bitmaps to Emacs' default."
+  (interactive)
+  (destroy-fringe-bitmap 'right-arrow)
+  (destroy-fringe-bitmap 'left-arrow)
+  (destroy-fringe-bitmap 'right-curly-arrow)
+  (destroy-fringe-bitmap 'left-curly-arrow)
+  (destroy-fringe-bitmap 'right-triangle)
+  (destroy-fringe-bitmap 'left-triangle)
+  (redraw-display)
+  (message "Reverted fringe bitmaps to default."))
+
+;;;###autoload
+
 (defun modern-fringes-invert-arrows ()
   "Apply ideal colors for the fringe truncation arrows in a flexible manner.  Should be used before (modern-fringes-init) is called in the user's init file."
   (interactive)
@@ -158,16 +175,11 @@
 
 ;;;###autoload
 
-(defun modern-fringes-revert ()
-  "Revert fringe bitmaps to Emacs' default."
-  (interactive)
-  (destroy-fringe-bitmap 'right-arrow)
-  (destroy-fringe-bitmap 'left-arrow)
-  (destroy-fringe-bitmap 'right-curly-arrow)
-  (destroy-fringe-bitmap 'left-curly-arrow)
-  (destroy-fringe-bitmap 'right-triangle)
-  (destroy-fringe-bitmap 'left-triangle)
-  (redraw-display)
-  (message "Reverted fringe bitmaps to default."))
+(define-minor-mode modern-fringes-mode nil nil nil
+  :global t
+  :group 'modern-fringes
+  (if modern-fringes-mode
+	  (modern-fringes-init)
+	(modern-fringes-revert)))
 
 ;;; modern-fringes.el ends here
