@@ -125,8 +125,6 @@
     "\"Transparent\" style face theme for modern-fringes left and right arrows."
     :group 'modern-fringes-faces)
 
-;;;###autoload
-
 (defun modern-fringes-init ()
   "Apply all of the modern fringe bitmaps.  Make your fringes look cool!"
   (interactive)
@@ -144,8 +142,6 @@
     (define-fringe-bitmap 'left-triange mf-left-debug-arrow nil nil 'center))
   (redraw-display)
   (message "Applied modern-fringes."))
-
-;;;###autoload
 
 (defun modern-fringes-revert ()
   "Revert fringe bitmaps to Emacs' default."
@@ -181,7 +177,6 @@ Should be used before (modern-fringes-init) is called in the user's init file."
   (if modern-fringes-mode
       (modern-fringes-init)
     (modern-fringes-revert)))
-
 
 (provide 'modern-fringes)
 
