@@ -123,8 +123,8 @@
 
 (defface modern-fringes-arrows
   '((default))
-	"\"Transparent\" style face theme for modern-fringes left and right arrows."
-	:group 'modern-fringes-faces)
+    "\"Transparent\" style face theme for modern-fringes left and right arrows."
+    :group 'modern-fringes-faces)
 
 ;;;###autoload
 
@@ -132,17 +132,17 @@
   "Apply all of the modern fringe bitmaps.  Make your fringes look cool!"
   (interactive)
   (let ((mf-right-arrow [128 192 224 240 248 252 254 252 248 240 224 192 128])
-		(mf-left-arrow [1 3 7 15 31 63 127 63 31 15 7 3 1])
-		(mf-right-curly-arrow [64 32 16 8 68 72 80 96 124])
-		(mf-left-curly-arrow [2 4 8 16 34 18 10 6 62])
-		(mf-right-debug-arrow [128 64 224 16 248 4 254 4 248 16 224 64 128])
-		(mf-left-debug-arrow [1 2 7 8 31 32 127 32 31 8 7 2 1]))
-	(define-fringe-bitmap 'right-arrow mf-right-arrow nil nil 'center)
-	(define-fringe-bitmap 'left-arrow mf-left-arrow nil nil 'center)
-	(define-fringe-bitmap 'right-curly-arrow mf-right-curly-arrow nil nil 'center)
-	(define-fringe-bitmap 'left-curly-arrow mf-left-curly-arrow nil nil 'center)
-	(define-fringe-bitmap 'right-triangle mf-right-debug-arrow nil nil 'center)
-	(define-fringe-bitmap 'left-triange mf-left-debug-arrow nil nil 'center))
+        (mf-left-arrow [1 3 7 15 31 63 127 63 31 15 7 3 1])
+        (mf-right-curly-arrow [64 32 16 8 68 72 80 96 124])
+        (mf-left-curly-arrow [2 4 8 16 34 18 10 6 62])
+        (mf-right-debug-arrow [128 64 224 16 248 4 254 4 248 16 224 64 128])
+        (mf-left-debug-arrow [1 2 7 8 31 32 127 32 31 8 7 2 1]))
+    (define-fringe-bitmap 'right-arrow mf-right-arrow nil nil 'center)
+    (define-fringe-bitmap 'left-arrow mf-left-arrow nil nil 'center)
+    (define-fringe-bitmap 'right-curly-arrow mf-right-curly-arrow nil nil 'center)
+    (define-fringe-bitmap 'left-curly-arrow mf-left-curly-arrow nil nil 'center)
+    (define-fringe-bitmap 'right-triangle mf-right-debug-arrow nil nil 'center)
+    (define-fringe-bitmap 'left-triange mf-left-debug-arrow nil nil 'center))
   (redraw-display)
   (message "Applied modern-fringes."))
 
@@ -166,8 +166,8 @@
   "Apply ideal colors for the fringe truncation arrows in a flexible manner.  Should be used before (modern-fringes-init) is called in the user's init file."
   (interactive)
   (set-face-attribute 'modern-fringes-arrows nil
-					  :foreground (face-attribute 'default :background)
-					  :background (face-attribute 'fringe :background))
+                      :foreground (face-attribute 'default :background)
+                      :background (face-attribute 'fringe :background))
   (set-fringe-bitmap-face 'right-arrow 'modern-fringes-arrows)
   (set-fringe-bitmap-face 'left-arrow 'modern-fringes-arrows)
   (message "Applied modern-fringes invert arrow colors."))
@@ -179,8 +179,8 @@
   :group 'modern-fringes
   :require 'modern-fringes
   (if modern-fringes-mode
-	  (modern-fringes-init)
-	(modern-fringes-revert)))
+      (modern-fringes-init)
+    (modern-fringes-revert)))
 
 
 (provide 'modern-fringes)
