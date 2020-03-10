@@ -11,20 +11,19 @@
 
 ;; modern-fringes is meant to replace the arguably ugly default fringe bitmaps
 ;; with more modern, easier on the eyes ones.  They are very simple to use,
-;; simply use the modern-fringes-mode.  As one knows, you may use customize
-;; to make the mode permanent.  It is a global minor mode, so it will affect
-;; all buffers.
+;; simply use the modern-fringes-mode.  As one knows, you may use customize to
+;; make the mode permanent.  It is a global minor mode, so it will affect all
+;; buffers.
 ;;
 ;; It is suggested to use the following function in your init file to
 ;; use modern-fringes at intended.  It makes the truncation arrows appear
 ;; transparent, making a very easy on the eyes zipper-effect.
 ;;
-;;   (modern-fringes-invert-arrows)
-;; 
-;; Depending on your theme, it may not work properly.  In that case,
-;; you can edit the bitmap faces as you wish in your config.
+;; (modern-fringes-invert-arrows)
 ;;
-;; modern-fringes was designed assuming the fringe width is 8 pixels
+;; Depending on your theme, it may not work
+;; properly.  In that case, you can edit the bitmap faces as you wish in your
+;; config.  modern-fringes was designed assuming the fringe width is 8 pixels
 ;; wide.  It will likely look strange if the width is any less or more.
 
 ;; bitmap references
@@ -163,7 +162,8 @@
 ;;;###autoload
 
 (defun modern-fringes-invert-arrows ()
-  "Apply ideal colors for the fringe truncation arrows in a flexible manner.  Should be used before (modern-fringes-init) is called in the user's init file."
+  "Apply ideal colors for the fringe truncation arrows in a flexible manner.
+Should be used before (modern-fringes-init) is called in the user's init file."
   (interactive)
   (set-face-attribute 'modern-fringes-arrows nil
                       :foreground (face-attribute 'default :background)
