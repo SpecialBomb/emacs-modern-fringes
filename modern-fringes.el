@@ -19,7 +19,7 @@
 ;; use modern-fringes at intended.  It makes the truncation arrows appear
 ;; transparent, making a very easy on the eyes zipper-effect.
 ;;
-;; (modern-fringes-invert-arrows)
+;;    (modern-fringes-invert-arrows)
 ;;
 ;; Depending on your theme, it may not work
 ;; properly.  In that case, you can edit the bitmap faces as you wish in your
