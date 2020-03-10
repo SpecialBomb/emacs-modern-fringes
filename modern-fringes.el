@@ -126,9 +126,7 @@
 	"\"Transparent\" style face theme for modern-fringes left and right arrows."
 	:group 'modern-fringes-faces)
 
-;;;###autoload
-
-(defun modern-fringes-init ()
+(defun modern-fringes--init ()
   "Apply all of the modern fringe bitmaps.  Make your fringes look cool!"
   (interactive)
   (let ((mf-right-arrow [128 192 224 240 248 252 254 252 248 240 224 192 128])
@@ -146,9 +144,7 @@
   (redraw-display)
   (message "Applied modern-fringes."))
 
-;;;###autoload
-
-(defun modern-fringes-revert ()
+(defun modern-fringes--revert ()
   "Revert fringe bitmaps to Emacs' default."
   (interactive)
   (destroy-fringe-bitmap 'right-arrow)
@@ -161,7 +157,6 @@
   (message "Reverted fringe bitmaps to default."))
 
 ;;;###autoload
-
 (defun modern-fringes-invert-arrows ()
   "Apply ideal colors for the fringe truncation arrows in a flexible manner.  Should be used before (modern-fringes-init) is called in the user's init file."
   (interactive)
@@ -173,14 +168,13 @@
   (message "Applied modern-fringes invert arrow colors."))
 
 ;;;###autoload
-
 (define-minor-mode modern-fringes-mode nil nil nil
   :global t
   :group 'modern-fringes
   :require 'modern-fringes
   (if modern-fringes-mode
-	  (modern-fringes-init)
-	(modern-fringes-revert)))
+	  (modern-fringes--init)
+	(modern-fringes--revert)))
 
 
 (provide 'modern-fringes)
