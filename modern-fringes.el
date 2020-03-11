@@ -5,7 +5,7 @@
 ;; Author: Quen Jankosky <quen.jankosky@gmail.com>
 ;; Keywords: themes, fringes, convenience
 ;; URL: http://github.com/specialbomb/emacs-modern-fringes
-;; Version: 4.1
+;; Version: 4.2
 
 ;;; Commentary:
 
