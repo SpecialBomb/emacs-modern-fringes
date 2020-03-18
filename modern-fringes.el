@@ -175,7 +175,7 @@ Should be used before (modern-fringes--init) is called in the user's init file."
   (if modern-fringes-mode
       (modern-fringes--init)
     (modern-fringes--revert))
-  (when (called-interactively-p 'any) (redraw-display)))
+  (when (eq arg 'toggle) (redraw-display)))
 
 (provide 'modern-fringes)
 
