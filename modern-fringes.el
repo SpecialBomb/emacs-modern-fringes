@@ -140,7 +140,6 @@
     (define-fringe-bitmap 'left-curly-arrow mf-left-curly-arrow nil nil 'center)
     (define-fringe-bitmap 'right-triangle mf-right-debug-arrow nil nil 'center)
     (define-fringe-bitmap 'left-triange mf-left-debug-arrow nil nil 'center))
-  (when (called-interactively-p 'any) (redraw-display))
   (message "Applied modern-fringes."))
 
 (defun modern-fringes--revert ()
@@ -152,7 +151,6 @@
   (destroy-fringe-bitmap 'left-curly-arrow)
   (destroy-fringe-bitmap 'right-triangle)
   (destroy-fringe-bitmap 'left-triangle)
-  (when (called-interactively-p 'any) (redraw-display))
   (message "Reverted fringe bitmaps to default."))
 
 ;;;###autoload
@@ -176,7 +174,8 @@ Should be used before (modern-fringes--init) is called in the user's init file."
   :require 'modern-fringes
   (if modern-fringes-mode
       (modern-fringes--init)
-    (modern-fringes--revert)))
+    (modern-fringes--revert))
+  (when (called-interactively-p 'any) (redraw-display)))
 
 (provide 'modern-fringes)
 
