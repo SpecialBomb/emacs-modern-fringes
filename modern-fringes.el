@@ -140,7 +140,7 @@
     (define-fringe-bitmap 'left-curly-arrow mf-left-curly-arrow nil nil 'center)
     (define-fringe-bitmap 'right-triangle mf-right-debug-arrow nil nil 'center)
     (define-fringe-bitmap 'left-triange mf-left-debug-arrow nil nil 'center))
-  (redraw-display)
+  (when (called-interactively-p 'any) (redraw-display))
   (message "Applied modern-fringes."))
 
 (defun modern-fringes--revert ()
@@ -152,7 +152,7 @@
   (destroy-fringe-bitmap 'left-curly-arrow)
   (destroy-fringe-bitmap 'right-triangle)
   (destroy-fringe-bitmap 'left-triangle)
-  (redraw-display)
+  (when (called-interactively-p 'any) (redraw-display))
   (message "Reverted fringe bitmaps to default."))
 
 ;;;###autoload
