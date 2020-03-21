@@ -158,7 +158,7 @@
 
 (defun modern-fringes-invert-arrows ()
   "Apply ideal colors for the fringe truncation arrows in a flexible manner.
-Should be used before (modern-fringes--init) is called in the user's init file."
+Should be used before (modern-fringes-mode) is enabled in the user's init file."
   (interactive)
   (set-face-attribute 'modern-fringes-arrows nil
                       :foreground (face-attribute 'default :background)
