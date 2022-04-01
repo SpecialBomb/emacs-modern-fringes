@@ -6,7 +6,7 @@
 ;; Keywords: themes, fringes, convenience
 ;; URL: http://github.com/specialbomb/emacs-modern-fringes
 ;; SPDX-License-Identifier: MIT 
-;; Version: 4.4
+;; Version: 4.5
 
 ;;; Commentary:
 
