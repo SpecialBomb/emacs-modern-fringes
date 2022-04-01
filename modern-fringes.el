@@ -129,7 +129,7 @@
     :group 'modern-fringes-faces)
 
 (defun modern-fringes--init ()
-  "Apply all of the modern fringe bitmaps.  Make your fringes look cool!"
+  "Apply all of the modern fringe bitmaps.  Make your fringes look groovy!"
   (interactive)
   (let ((mf-right-arrow [128 192 224 240 248 252 254 252 248 240 224 192 128])
         (mf-left-arrow [1 3 7 15 31 63 127 63 31 15 7 3 1])
