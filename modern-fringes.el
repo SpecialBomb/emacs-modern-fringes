@@ -1,6 +1,6 @@
 ;;; modern-fringes.el --- Modern fringe bitmaps  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2022 Quen Jankosky
+;; Copyright (C) 2026 Quen Jankosky
 
 ;; Author: Quen Jankosky <quen.jankosky@gmail.com>
 ;; Keywords: themes, fringes, convenience
