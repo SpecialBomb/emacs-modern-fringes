@@ -1,4 +1,4 @@
-;;; modern-fringes.el --- Replaces default fringe bitmaps with better looking ones
+;;; modern-fringes.el --- Modern fringe bitmaps  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2022 Quen Jankosky
 
