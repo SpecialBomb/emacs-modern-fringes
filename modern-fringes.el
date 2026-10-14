@@ -171,7 +171,10 @@ Should be used before (modern-fringes-mode) is enabled in the user's init file."
 
 ;;;###autoload
 
-(define-minor-mode modern-fringes-mode nil nil nil
+(define-minor-mode modern-fringes-mode "Toggles modern fringes."
+  :init-value nil
+  :lighter nil
+  :keymap nil
   :global t
   :group 'modern-fringes
   :require 'modern-fringes
